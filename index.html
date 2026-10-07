@@ -1,1 +1,1606 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biochemistry Unit Review &amp; 3 Full Practice Tests - 9th Grade Biology</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            bio: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+              800: '#166534',
+              900: '#14532d',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    @media print {
+      .no-print { display: none !important; }
+      .answer-content { display: block !important; }
+      body { background: white !important; color: black !important; font-size: 11pt; }
+      .card-box { break-inside: avoid; border: 1px solid #cbd5e1 !important; box-shadow: none !important; margin-bottom: 1rem !important; }
+      .test-container { display: block !important; }
+      .tab-content { display: none; }
+      .tab-content.active-tab { display: block !important; }
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.15rem 0.6rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col">
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-xl bg-bio-600 text-white flex items-center justify-center font-bold text-xl shadow-md shadow-bio-500/20">
+            🧬
+          </div>
+          <div>
+            <h1 class="text-xl font-bold text-slate-900 leading-tight">Biochemistry Review &amp; Testing Suite</h1>
+            <p class="text-xs text-slate-500 font-medium">9th Grade Biology &bull; Miller &amp; Levine Chapter 2 Study Companion</p>
+          </div>
+        </div>
+
+        <!-- Global Action Controls -->
+        <div class="flex flex-wrap items-center gap-2">
+          <button onclick="window.print()" class="px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-900 text-white text-xs font-semibold transition flex items-center gap-1.5 shadow-sm">
+            🖨️ Print / Save PDF
+          </button>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs: Study Guide vs Practice Tests -->
+      <div class="mt-3 pt-2 border-t border-slate-100 flex items-center gap-2 overflow-x-auto custom-scroll pb-1">
+        <button onclick="switchTab('study-guide')" id="tabBtn-study-guide" class="tab-btn px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-bio-600 text-white shadow-sm shadow-bio-600/20">
+          <span>📖</span> Study Guide (All 32 Worksheet Qs)
+        </button>
+        <button onclick="switchTab('test-1')" id="tabBtn-test-1" class="tab-btn px-4 py-2 rounded-xl text-xs font-semibold transition flex items-center gap-1.5 bg-slate-100 text-slate-700 hover:bg-slate-200">
+          <span>📝</span> Practice Test 1 (25 MCQ + 5 FRQ)
+        </button>
+        <button onclick="switchTab('test-2')" id="tabBtn-test-2" class="tab-btn px-4 py-2 rounded-xl text-xs font-semibold transition flex items-center gap-1.5 bg-slate-100 text-slate-700 hover:bg-slate-200">
+          <span>📝</span> Practice Test 2 (25 MCQ + 5 FRQ)
+        </button>
+        <button onclick="switchTab('test-3')" id="tabBtn-test-3" class="tab-btn px-4 py-2 rounded-xl text-xs font-semibold transition flex items-center gap-1.5 bg-slate-100 text-slate-700 hover:bg-slate-200">
+          <span>📝</span> Practice Test 3 (25 MCQ + 5 FRQ)
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex-1 w-full">
+    <!-- ======================================================== -->
+    <!-- TAB 1: ORIGINAL WORKSHEET STUDY GUIDE WITH UPDATED Q5    -->
+    <!-- ======================================================== -->
+    <div id="tab-study-guide" class="tab-content active-tab space-y-8">
+      <!-- Quick Notice Banner -->
+      <div class="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-emerald-50 via-teal-50 to-cyan-50 border border-emerald-200 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div class="space-y-1">
+          <div class="flex items-center gap-2">
+            <span class="inline-block px-2 py-0.5 rounded-md bg-emerald-600 text-white text-[11px] font-bold uppercase tracking-wider">Unit 2 Review Guide</span>
+            <span class="text-xs font-semibold text-emerald-800">Complete 32-Question Sheet with Detailed Solutions</span>
+          </div>
+          <h2 class="text-base sm:text-lg font-bold text-slate-900">Worksheet Companion &amp; Reference Guide</h2>
+          <p class="text-xs sm:text-sm text-slate-600">
+            Use this guide to master the 32 questions from your review sheet. Click <span class="font-semibold text-emerald-700">"Check Answer"</span> to toggle explanations, or test yourself with the 3 timed practice tests in the tabs above!
+          </p>
+        </div>
+        <div class="flex items-center gap-2 shrink-0">
+          <button onclick="toggleAllAnswers()" id="toggleAllBtn" class="px-3 py-1.5 rounded-lg border border-slate-300 text-xs font-medium bg-white hover:bg-slate-50 text-slate-700 transition flex items-center gap-1.5 shadow-sm">
+            <span id="toggleAllIcon">👁️</span> <span id="toggleAllText">Hide All Answers</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- SECTION 1: PROPERTIES OF WATER -->
+      <section class="section-container" data-section="water">
+        <div class="flex items-center gap-3 mb-6 pb-2 border-b-2 border-cyan-400">
+          <div class="w-8 h-8 rounded-lg bg-cyan-500 text-white flex items-center justify-center font-bold text-lg shadow-sm">💧</div>
+          <div>
+            <h2 class="text-xl font-bold text-slate-900">Part 1: The Chemistry of Water</h2>
+            <p class="text-xs text-slate-500">Questions 1 – 3 &bull; Polarity, Hydrogen Bonding, and Properties Supporting Life</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <!-- Q1: Water Molecule Diagram & Charges -->
+          <div class="card-box bg-white rounded-2xl border border-slate-200 shadow-sm p-5 flex flex-col justify-between" id="card-q1">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="badge-pill bg-cyan-100 text-cyan-800">Question 1</span>
+              </div>
+              <h3 class="font-bold text-slate-900 mb-2">1. Label the atoms that make up a water molecule. Label the charges that accompany the atoms with a + or &minus;.</h3>
+              
+              <!-- Interactive SVG Diagram of Water Molecule -->
+              <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 flex flex-col items-center justify-center my-3">
+                <div class="text-[11px] text-slate-400 uppercase font-bold tracking-wider mb-2">Water Molecule (H₂O)</div>
+                <svg viewBox="0 0 280 180" class="w-full max-w-[240px] h-auto drop-shadow-sm">
+                  <circle cx="140" cy="70" r="42" fill="#ef4444" stroke="#b91c1c" stroke-width="3" />
+                  <text x="140" y="74" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">O</text>
+                  <text x="140" y="93" text-anchor="middle" fill="#fee2e2" font-size="11" font-weight="semibold">Oxygen</text>
+
+                  <line x1="110" y1="95" x2="68" y2="125" stroke="#94a3b8" stroke-width="8" stroke-linecap="round" />
+                  <line x1="170" y1="95" x2="212" y2="125" stroke="#94a3b8" stroke-width="8" stroke-linecap="round" />
+
+                  <circle cx="55" cy="135" r="28" fill="#3b82f6" stroke="#1d4ed8" stroke-width="3" />
+                  <text x="55" y="139" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">H</text>
+                  <text x="55" y="154" text-anchor="middle" fill="#dbeafe" font-size="9" font-weight="semibold">Hydrogen</text>
+
+                  <circle cx="225" cy="135" r="28" fill="#3b82f6" stroke="#1d4ed8" stroke-width="3" />
+                  <text x="225" y="139" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">H</text>
+                  <text x="225" y="154" text-anchor="middle" fill="#dbeafe" font-size="9" font-weight="semibold">Hydrogen</text>
+
+                  <rect x="122" y="12" width="36" height="22" rx="11" fill="#dc2626" />
+                  <text x="140" y="27" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">&delta;&minus;</text>
+
+                  <rect x="37" y="80" width="36" height="22" rx="11" fill="#2563eb" />
+                  <text x="55" y="95" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">&delta;+</text>
+
+                  <rect x="207" y="80" width="36" height="22" rx="11" fill="#2563eb" />
+                  <text x="225" y="95" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">&delta;+</text>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Answer Box -->
+            <div class="mt-4 pt-3 border-t border-slate-100">
+              <button onclick="toggleAnswer('q1-ans')" class="text-xs font-semibold text-cyan-700 hover:text-cyan-900 flex items-center gap-1">
+                <span id="q1-ans-icon">▼</span> View Official Solution &amp; Explanation
+              </button>
+              <div id="q1-ans" class="answer-content mt-3 p-3.5 bg-cyan-50/70 border border-cyan-200 rounded-xl text-xs space-y-2 text-slate-700">
+                <p><strong class="text-cyan-900">Atoms:</strong> <strong>1 Oxygen atom</strong> covalently bonded to <strong>2 Hydrogen atoms</strong> (<code class="bg-cyan-100 px-1 py-0.5 rounded text-cyan-900 font-mono">H₂O</code>).</p>
+                <p><strong class="text-cyan-900">Charges:</strong> Oxygen pulls shared electrons strongly, giving it a <strong>partial negative charge (&minus; or &delta;&minus;)</strong>. The two Hydrogens are left with <strong>partial positive charges (+ or &delta;+)</strong>.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q2: Why Water is Important for Survival -->
+          <div class="card-box bg-white rounded-2xl border border-slate-200 shadow-sm p-5 flex flex-col justify-between" id="card-q2">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="badge-pill bg-cyan-100 text-cyan-800">Question 2</span>
+              </div>
+              <h3 class="font-bold text-slate-900 mb-2">2. Why is water important for living organisms to survive?</h3>
+              <p class="text-xs text-slate-500 mb-4">Focus on cellular functions and biological homeostasis.</p>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-slate-100">
+              <button onclick="toggleAnswer('q2-ans')" class="text-xs font-semibold text-cyan-700 hover:text-cyan-900 flex items-center gap-1">
+                <span id="q2-ans-icon">▼</span> View Official Solution &amp; Explanation
+              </button>
+              <div id="q2-ans" class="answer-content mt-3 p-3.5 bg-cyan-50/70 border border-cyan-200 rounded-xl text-xs space-y-1.5 text-slate-700">
+                <p class="font-bold text-cyan-950">Water is the universal medium for life because:</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li><strong>Universal Solvent:</strong> Dissolves minerals, nutrients, and waste for transport through blood and cytoplasm.</li>
+                  <li><strong>Medium for Chemical Reactions:</strong> Metabolic processes occur dissolved in cellular water.</li>
+                  <li><strong>Temperature Regulation:</strong> High heat capacity prevents drastic temperature swings in cells.</li>
+                  <li><strong>Evaporative Cooling:</strong> Sweating removes excess heat to maintain homeostasis.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q3: Water Properties Definitions -->
+          <div class="card-box bg-white rounded-2xl border border-slate-200 shadow-sm p-5 lg:col-span-2 flex flex-col justify-between" id="card-q3">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="badge-pill bg-cyan-100 text-cyan-800">Question 3</span>
+              </div>
+              <h3 class="font-bold text-slate-900 mb-2">3. Define these properties of water:</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 text-xs font-semibold text-slate-700 mb-4">
+                <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200 text-center">a. Polarity</div>
+                <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200 text-center">b. Cohesion</div>
+                <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200 text-center">c. Adhesion</div>
+                <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200 text-center">d. Surface Tension</div>
+                <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200 text-center">e. Capillarity</div>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-slate-100">
+              <button onclick="toggleAnswer('q3-ans')" class="text-xs font-semibold text-cyan-700 hover:text-cyan-900 flex items-center gap-1">
+                <span id="q3-ans-icon">▼</span> View Official Definitions
+              </button>
+              <div id="q3-ans" class="answer-content mt-3 p-4 bg-cyan-50/70 border border-cyan-200 rounded-xl text-xs space-y-3 text-slate-700">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <div class="bg-white p-3 rounded-lg border border-cyan-100">
+                    <span class="font-bold text-cyan-900 block mb-0.5">a. Polarity</span>
+                    Unequal sharing of electrons resulting in a slightly negative oxygen pole and slightly positive hydrogen poles.
+                  </div>
+                  <div class="bg-white p-3 rounded-lg border border-cyan-100">
+                    <span class="font-bold text-cyan-900 block mb-0.5">b. Cohesion</span>
+                    The attraction between molecules of the <strong>same</strong> substance (water sticking to water via hydrogen bonds).
+                  </div>
+                  <div class="bg-white p-3 rounded-lg border border-cyan-100">
+                    <span class="font-bold text-cyan-900 block mb-0.5">c. Adhesion</span>
+                    The attraction between molecules of <strong>different</strong> substances (water sticking to glass or plant xylem walls).
+                  </div>
+                  <div class="bg-white p-3 rounded-lg border border-cyan-100">
+                    <span class="font-bold text-cyan-900 block mb-0.5">d. Surface Tension</span>
+                    The elastic tendency of a liquid's surface caused by cohesive forces pulling surface molecules inward, allowing small insects to walk on water.
+                  </div>
+                  <div class="bg-white p-3 rounded-lg border border-cyan-100 md:col-span-2">
+                    <span class="font-bold text-cyan-900 block mb-0.5">e. Capillarity (Capillary Action)</span>
+                    The upward movement of water through narrow tubes against gravity, resulting from <strong>adhesion</strong> to tube walls combined with <strong>cohesion</strong> between water molecules.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: FOOD, DIGESTION & CARBON -->
+      <section class="section-container" data-section="body">
+        <div class="flex items-center gap-3 mb-6 pb-2 border-b-2 border-amber-400">
+          <div class="w-8 h-8 rounded-lg bg-amber-500 text-white flex items-center justify-center font-bold text-lg shadow-sm">🍎</div>
+          <div>
+            <h2 class="text-xl font-bold text-slate-900">Part 2: Food, Digestion &amp; Carbon Backbone</h2>
+            <p class="text-xs text-slate-500">Questions 4 – 7 &bull; Nutrient Flow, Monomers vs. Polymers, and Carbon Bonding</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <!-- Q4: Purpose of Food -->
+          <div class="card-box bg-white rounded-2xl border border-slate-200 shadow-sm p-5 flex flex-col justify-between" id="card-q4">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="badge-pill bg-amber-100 text-amber-800">Question 4</span>
+              </div>
+              <h3 class="font-bold text-slate-900 mb-2">4. What purpose does food serve for organisms?</h3>
+              <p class="text-xs text-slate-500 mb-4">Identify the two primary physiological purposes.</p>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-slate-100">
+              <button onclick="toggleAnswer('q4-ans')" class="text-xs font-semibold text-amber-700 hover:text-amber-900 flex items-center gap-1">
+                <span id="q4-ans-icon">▼</span> View Official Solution
+              </button>
+              <div id="q4-ans" class="answer-content mt-3 p-3.5 bg-amber-50/70 border border-amber-200 rounded-xl text-xs space-y-1.5 text-slate-700">
+                <p><strong>1. Source of Energy:</strong> Broken down during cellular respiration to produce <strong>ATP</strong> to fuel cellular processes.</p>
+                <p><strong>2. Source of Raw Materials (Matter):</strong> Provides essential building blocks to grow new cells, repair tissues, and synthesize macromolecules.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q5: UPDATED DIGESTIVE FLOW AS REQUESTED -->
+          <div class="card-box bg-white rounded-2xl border border-slate-200 shadow-sm p-5 flex flex-col justify-between" id="card-q5">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="badge-pill bg-amber-100 text-amber-800">Question 5 &bull; Updated Pathway</span>
+              </div>
+              <h3 class="font-bold text-slate-900 mb-2">5. What is the flow of food through the human digestive system?</h3>
+              <p class="text-xs text-slate-500 mb-4">The exact anatomical sequence through the alimentary canal.</p>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-slate-100">
+              <button onclick="toggleAnswer('q5-ans')" class="text-xs font-semibold text-amber-700 hover:text-amber-900 flex items-center gap-1">
+                <span id="q5-ans-icon">▼</span> View Official Digestive Pathway
+              </button>
+              <div id="q5-ans" class="answer-content mt-3 p-3.5 bg-amber-50/70 border border-amber-200 rounded-xl text-xs space-y-2 text-slate-700">
+                <p class="font-bold text-amber-950">Official 9th Grade Flow of Food:</p>
+                <div class="flex flex-wrap items-center gap-1.5 font-bold text-[11px] sm:text-xs">
+                  <span class="bg-amber-200/80 text-amber-950 px-2.5 py-1 rounded-md shadow-xs">Mouth</span>
+                  <span>&rarr;</span>
+                  <span class="bg-amber-200/80 text-amber-950 px-2.5 py-1 rounded-md shadow-xs">Esophagus</span>
+                  <span>&rarr;</span>
+                  <span class="bg-amber-200/80 text-amber-950 px-2.5 py-1 rounded-md shadow-xs">Stomach</span>
+                  <span>&rarr;</span>
+                  <span class="bg-amber-200/80 text-amber-950 px-2.5 py-1 rounded-md shadow-xs">Small Intestine</span>
+                  <span>&rarr;</span>
+                  <span class="bg-amber-200/80 text-amber-950 px-2.5 py-1 rounded-md shadow-xs">6. Large Intestine (Colon)</span>
+                  <span>&rarr;</span>
+                  <span class="bg-amber-200/80 text-amber-950 px-2.5 py-1 rounded-md shadow-xs">7. Rectum</span>
+                  <span>&rarr;</span>
+                  <span class="bg-amber-200/80 text-amber-950 px-2.5 py-1 rounded-md shadow-xs">8. Anus</span>
+                </div>
+                <p class="text-[11px] text-slate-500 mt-2">
+                  <em>Note:</em> Food passes sequentially through this tube. Solid wastes are compacted in the colon, stored in the rectum, and eliminated through the anus.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q6: Why Carbon is the Basis of Life -->
+          <div class="card-box bg-white rounded-2xl border border-slate-200 shadow-sm p-5 flex flex-col justify-between" id="card-q6">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="badge-pill bg-amber-100 text-amber-800">Question 6</span>
+              </div>
+              <h3 class="font-bold text-slate-900 mb-2">6. Why is carbon the basis of life?</h3>
+              <p class="text-xs text-slate-500 mb-4">Relate to carbon's atomic valence structure.</p>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-slate-100">
+              <button onclick="toggleAnswer('q6-ans')" class="text-xs font-semibold text-amber-700 hover:text-amber-900 flex items-center gap-1">
+                <span id="q6-ans-icon">▼</span> View Official Solution
+              </button>
+              <div id="q6-ans" class="answer-content mt-3 p-3.5 bg-amber-50/70 border border-amber-200 rounded-xl text-xs space-y-1.5 text-slate-700">
+                <p>Carbon has <strong>4 valence electrons</strong>, enabling it to form <strong>4 strong covalent bonds</strong> simultaneously.</p>
+                <p>It can bond with itself and other elements to build an infinite variety of <strong>straight chains, branched chains, and rings</strong>.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q7: Monomers vs Polymers -->
+          <div class="card-box bg-white rounded-2xl border border-slate-200 shadow-sm p-5 flex flex-col justify-between" id="card-q7">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="badge-pill bg-amber-100 text-amber-800">Question 7</span>
+              </div>
+              <h3 class="font-bold text-slate-900 mb-2">7. Label a monomer and the polymer. Define both terms.</h3>
+              
+              <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 flex flex-col items-center justify-center my-2">
+                <svg viewBox="0 0 360 90" class="w-full max-w-[300px] h-auto">
+                  <g fill="#60a5fa" stroke="#1e40af" stroke-width="2">
+                    <rect x="20" y="30" width="30" height="25" rx="4" />
+                    <rect x="55" y="30" width="30" height="25" rx="4" />
+                    <rect x="90" y="30" width="30" height="25" rx="4" />
+                    <rect x="125" y="30" width="30" height="25" rx="4" />
+                    <rect x="160" y="30" width="30" height="25" rx="4" />
+                  </g>
+                  <g fill="#fbbf24" stroke="#b45309" stroke-width="2">
+                    <rect x="235" y="15" width="28" height="25" rx="4" />
+                    <rect x="275" y="45" width="28" height="25" rx="4" />
+                    <rect x="245" y="55" width="28" height="25" rx="4" />
+                  </g>
+                  <text x="95" y="20" text-anchor="middle" fill="#1e40af" font-size="11" font-weight="bold">POLYMER (Chain)</text>
+                  <text x="260" y="12" text-anchor="middle" fill="#b45309" font-size="11" font-weight="bold">MONOMERS (Single)</text>
+                </svg>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-slate-100">
+              <button onclick="toggleAnswer('q7-ans')" class="text-xs font-semibold text-amber-700 hover:text-amber-900 flex items-center gap-1">
+                <span id="q7-ans-icon">▼</span> View Official Definitions
+              </button>
+              <div id="q7-ans" class="answer-content mt-3 p-3.5 bg-amber-50/70 border border-amber-200 rounded-xl text-xs space-y-1.5 text-slate-700">
+                <p><strong>Monomer:</strong> A small, single molecular building block subunit (e.g., glucose, amino acid).</p>
+                <p><strong>Polymer:</strong> A large macromolecule composed of many repeating monomers joined by covalent bonds (e.g., starch, polypeptide chain).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: THE 4 MACROMOLECULES CHART (Q8-20) & Q21-22 -->
+      <section class="section-container" data-section="macromolecules">
+        <div class="flex items-center gap-3 mb-6 pb-2 border-b-2 border-indigo-400">
+          <div class="w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-bold text-lg shadow-sm">🍞</div>
+          <div>
+            <h2 class="text-xl font-bold text-slate-900">Part 3: The 4 Macromolecules of Life</h2>
+            <p class="text-xs text-slate-500">Questions 8 – 22 &bull; Monomers, Polymers, Functions, and Healthy Dietary Sources</p>
+          </div>
+        </div>
+
+        <div class="card-box bg-white rounded-2xl border border-slate-200 shadow-sm p-5 mb-8">
+          <div class="flex items-center justify-between mb-4">
+            <span class="badge-pill bg-indigo-100 text-indigo-800">Questions 8 – 20: Master Chart</span>
+          </div>
+
+          <div class="overflow-x-auto rounded-xl border border-slate-200 custom-scroll">
+            <table class="w-full text-left border-collapse text-xs">
+              <thead>
+                <tr class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200 uppercase tracking-wider text-[11px]">
+                  <th class="p-3 w-1/5">Macromolecule</th>
+                  <th class="p-3 w-1/4">Monomer</th>
+                  <th class="p-3 w-1/4">Polymer</th>
+                  <th class="p-3 w-2/5">Major Biological Function(s)</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 font-medium">
+                <tr class="hover:bg-amber-50/40">
+                  <td class="p-3 font-bold text-amber-900 bg-amber-50/60">🍞 Carbohydrates</td>
+                  <td class="p-3"><strong>9. Monosaccharide</strong><br><span class="text-[11px] text-slate-500">e.g., Glucose (C₆H₁₂O₆)</span></td>
+                  <td class="p-3"><strong>10. Polysaccharide</strong><br><span class="text-[11px] text-slate-500">e.g., Starch, Glycogen, Cellulose</span></td>
+                  <td class="p-3"><strong>11. Fast / Primary Energy</strong><br><span class="text-[11px] text-slate-600">Immediate cellular energy (ATP) &amp; plant cell wall structure.</span></td>
+                </tr>
+                <tr class="hover:bg-yellow-50/40">
+                  <td class="p-3 font-bold text-yellow-900 bg-yellow-50/60">🥑 Lipids</td>
+                  <td class="p-3"><strong>12. Glycerol &amp; Fatty Acids</strong><br><span class="text-[11px] text-slate-500">Subunits attached to glycerol</span></td>
+                  <td class="p-3"><strong>13. Triglycerides / Phospholipids</strong><br><span class="text-[11px] text-slate-500">Fats, oils, waxes, steroid hormones</span></td>
+                  <td class="p-3"><strong>14. Long-Term Energy &amp; Membranes</strong><br><span class="text-[11px] text-slate-600">Stored energy (2x calories of carbs), cell membrane bilayer, thermal insulation.</span></td>
+                </tr>
+                <tr class="hover:bg-rose-50/40">
+                  <td class="p-3 font-bold text-rose-900 bg-rose-50/60">🥩 Proteins</td>
+                  <td class="p-3"><strong>15. Amino Acids</strong><br><span class="text-[11px] text-slate-500">20 types with variable R-groups</span></td>
+                  <td class="p-3"><strong>16. Polypeptide (Protein)</strong><br><span class="text-[11px] text-slate-500">Folded 3D active chains</span></td>
+                  <td class="p-3"><strong>17. Cellular Machinery &amp; Structure</strong><br><span class="text-[11px] text-slate-600">Enzymes (catalysts), muscle contraction, antibodies, structural collagen.</span></td>
+                </tr>
+                <tr class="hover:bg-purple-50/40">
+                  <td class="p-3 font-bold text-purple-900 bg-purple-50/60">🧬 Nucleic Acids</td>
+                  <td class="p-3"><strong>18. Nucleotide</strong><br><span class="text-[11px] text-slate-500">Sugar + Phosphate + Nitrogen base</span></td>
+                  <td class="p-3"><strong>19. Polynucleotide (DNA / RNA)</strong><br><span class="text-[11px] text-slate-500">Double-helix DNA, single-strand RNA</span></td>
+                  <td class="p-3"><strong>20. Genetic Blueprint</strong><br><span class="text-[11px] text-slate-600">Stores and transmits hereditary instructions to code for proteins.</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <!-- Q21: Healthy Examples -->
+          <div class="card-box bg-white rounded-2xl border border-slate-200 shadow-sm p-5 flex flex-col justify-between" id="card-q21">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="badge-pill bg-indigo-100 text-indigo-800">Question 21</span>
+              </div>
+              <h3 class="font-bold text-slate-900 mb-2">21. What are healthy examples of the following macromolecules?</h3>
+              <p class="text-xs text-slate-600 mb-3">a. carbohydrates &bull; b. lipids &bull; c. proteins</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100">
+              <button onclick="toggleAnswer('q21-ans')" class="text-xs font-semibold text-indigo-700 hover:text-indigo-900 flex items-center gap-1">
+                <span id="q21-ans-icon">▼</span> View Healthy Food Examples
+              </button>
+              <div id="q21-ans" class="answer-content mt-3 p-3 bg-indigo-50/70 border border-indigo-200 rounded-xl text-xs space-y-1.5 text-slate-700">
+                <p><strong>a. Healthy Carbs:</strong> Whole grains (oats, brown rice), whole fruits, beans, sweet potatoes.</p>
+                <p><strong>b. Healthy Lipids:</strong> Avocados, extra-virgin olive oil, nuts, seeds, fatty fish (salmon).</p>
+                <p><strong>c. Healthy Proteins:</strong> Eggs, lean chicken, lentils, chickpeas, tofu, Greek yogurt.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q22: Functions of Proteins -->
+          <div class="card-box bg-white rounded-2xl border border-slate-200 shadow-sm p-5 flex flex-col justify-between" id="card-q22">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="badge-pill bg-indigo-100 text-indigo-800">Question 22</span>
+              </div>
+              <h3 class="font-bold text-slate-900 mb-2">22. List some specific functions of proteins:</h3>
+              <p class="text-xs text-slate-500 mb-3">Name key biological functions performed by proteins.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100">
+              <button onclick="toggleAnswer('q22-ans')" class="text-xs font-semibold text-indigo-700 hover:text-indigo-900 flex items-center gap-1">
+                <span id="q22-ans-icon">▼</span> View Protein Functions
+              </button>
+              <div id="q22-ans" class="answer-content mt-3 p-3 bg-indigo-50/70 border border-indigo-200 rounded-xl text-xs space-y-1 text-slate-700">
+                <p>&bull; <strong>Enzymes:</strong> Speed up biochemical reactions.</p>
+                <p>&bull; <strong>Structure:</strong> Collagen in skin, keratin in hair and nails.</p>
+                <p>&bull; <strong>Transport:</strong> Hemoglobin moving oxygen in red blood cells.</p>
+                <p>&bull; <strong>Immunity:</strong> Antibodies defending against pathogens.</p>
+                <p>&bull; <strong>Movement:</strong> Actin and myosin in muscle fibers.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: ENZYMES & CHEMICAL REACTIONS (Q23-32) -->
+      <section class="section-container" data-section="enzymes">
+        <div class="flex items-center gap-3 mb-6 pb-2 border-b-2 border-emerald-500">
+          <div class="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-bold text-lg shadow-sm">⚡</div>
+          <div>
+            <h2 class="text-xl font-bold text-slate-900">Part 4: Enzymes &amp; Chemical Reactions</h2>
+            <p class="text-xs text-slate-500">Questions 23 – 32 &bull; Catalysts, Activation Energy, Lock-and-Key Model, and Denaturation</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+          <div class="card-box bg-white p-4 rounded-xl border border-slate-200 text-xs">
+            <span class="font-bold text-emerald-800 block mb-1">23. Activation Energy</span>
+            <p class="text-slate-600">The minimum amount of energy needed to start a chemical reaction.</p>
+          </div>
+          <div class="card-box bg-white p-4 rounded-xl border border-slate-200 text-xs">
+            <span class="font-bold text-emerald-800 block mb-1">24. Catalyst Role</span>
+            <p class="text-slate-600">Speeds up reactions by lowering activation energy without being consumed.</p>
+          </div>
+          <div class="card-box bg-white p-4 rounded-xl border border-slate-200 text-xs">
+            <span class="font-bold text-emerald-800 block mb-1">25. What is an Enzyme?</span>
+            <p class="text-slate-600">A biological catalyst made of folded protein.</p>
+          </div>
+          <div class="card-box bg-white p-4 rounded-xl border border-slate-200 text-xs">
+            <span class="font-bold text-emerald-800 block mb-1">26. Denaturing Factors</span>
+            <p class="text-slate-600">Extreme <strong>temperature</strong> and drastic changes in <strong>pH</strong>.</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6 text-xs">
+          <div class="card-box bg-white p-4 rounded-xl border border-slate-200">
+            <span class="font-bold text-slate-900 block mb-1">27. Specific Substrate?</span>
+            <span class="text-emerald-700 font-bold block text-sm">✅ TRUE</span>
+            <p class="text-[11px] text-slate-500 mt-1">Active site matches one specific substrate.</p>
+          </div>
+          <div class="card-box bg-white p-4 rounded-xl border border-slate-200">
+            <span class="font-bold text-slate-900 block mb-1">28. Many Different Reactions?</span>
+            <span class="text-rose-600 font-bold block text-sm">❌ FALSE</span>
+            <p class="text-[11px] text-slate-500 mt-1">Enzymes typically catalyze only one reaction.</p>
+          </div>
+          <div class="card-box bg-white p-4 rounded-xl border border-slate-200">
+            <span class="font-bold text-slate-900 block mb-1">29. End in "-ase"?</span>
+            <span class="text-emerald-700 font-bold block text-sm">✅ TRUE</span>
+            <p class="text-[11px] text-slate-500 mt-1">e.g., Lactase, Amylase, Lipase.</p>
+          </div>
+          <div class="card-box bg-white p-4 rounded-xl border border-slate-200">
+            <span class="font-bold text-slate-900 block mb-1">30. Macromolecule Class?</span>
+            <span class="text-emerald-700 font-bold block text-sm">🥩 PROTEINS</span>
+            <p class="text-[11px] text-slate-500 mt-1">Formed from folded amino acid chains.</p>
+          </div>
+        </div>
+
+        <!-- Q31 & Q32 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="card-box bg-white rounded-2xl border border-slate-200 shadow-sm p-5">
+            <span class="badge-pill bg-emerald-100 text-emerald-800 mb-2">Question 31</span>
+            <h3 class="font-bold text-slate-900 mb-2">31. Most enzymes...</h3>
+            <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl text-xs space-y-1 text-slate-700">
+              <span class="font-bold text-emerald-950 block text-sm">Correct: d. are sensitive to changes in temperature or pH</span>
+              <p class="text-[11px] text-slate-600">Enzymes are not consumed (a is false), they lower activation energy (b is false), and they strain/weaken substrate bonds (c is false).</p>
+            </div>
+          </div>
+
+          <div class="card-box bg-white rounded-2xl border border-slate-200 shadow-sm p-5">
+            <span class="badge-pill bg-emerald-100 text-emerald-800 mb-2">Question 32 &bull; Diagram</span>
+            <h3 class="font-bold text-slate-900 mb-1">32. Enzyme-Substrate Cycle</h3>
+            <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs space-y-1 text-slate-700">
+              <p><strong>Step 1:</strong> <span class="text-amber-800 font-bold">Substrate</span> enters <span class="text-emerald-800 font-bold">Enzyme's Active Site</span>.</p>
+              <p><strong>Step 2:</strong> Temporary <span class="font-bold text-emerald-950">Enzyme-Substrate Complex</span> forms.</p>
+              <p><strong>Step 3:</strong> Substrate is converted to <span class="text-amber-800 font-bold">Products</span>, leaving <span class="text-emerald-800 font-bold">Enzyme unchanged</span> and reusable.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- TAB 2, 3, 4: DYNAMIC PRACTICE TESTS CONTAINER            -->
+    <!-- ======================================================== -->
+    <div id="test-view-container" class="space-y-6">
+      <!-- Injected dynamically via JavaScript -->
+    </div>
+  </main>
+
+  <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500 no-print">
+    <div class="max-w-7xl mx-auto px-4">
+      <p class="font-medium text-slate-700">9th Grade Biology Unit 2 Exam Preparation &bull; Miller &amp; Levine Curriculum</p>
+      <p class="mt-1 text-slate-400">Mastery Suite: Water &bull; Food &amp; Carbon &bull; Macromolecules &bull; Enzymes</p>
+    </div>
+  </footer>
+
+  <!-- ======================================================== -->
+  <!-- JAVASCRIPT: DATA FOR 3 PRACTICE TESTS + CONTROLLER LOGIC -->
+  <!-- ======================================================== -->
+  <script>
+    const practiceTests = {
+      'test-1': {
+        id: 'test-1',
+        title: 'Biochemistry Practice Test 1 (Form A)',
+        subtitle: 'Standardized 9th Grade Exam &bull; 25 Multiple Choice &bull; 5 Free Response',
+        mcqs: [
+          // Water (1-6)
+          { q: "1. Why is a water molecule considered polar?",
+            options: [
+              "Oxygen and hydrogen share electrons equally.",
+              "Oxygen pulls electrons closer to its nucleus, creating partial positive and negative poles.",
+              "Water easily loses protons to form positive ions in solution.",
+              "Water has an equal balance of ionic and nonpolar bonds."
+            ],
+            correct: 1,
+            rationale: "Oxygen is highly electronegative, pulling shared electrons toward itself. This causes oxygen to be partially negative (δ-) and the hydrogens to be partially positive (δ+)."
+          },
+          { q: "2. The attraction between two water molecules sticking to each other is called:",
+            options: ["Adhesion", "Cohesion", "Ionic bonding", "Capillarity"],
+            correct: 1,
+            rationale: "Cohesion is the attraction between molecules of the SAME substance (water sticking to water via hydrogen bonds)."
+          },
+          { q: "3. Which property of water allows small insects like water striders to walk across a pond?",
+            options: ["Low density of ice", "Capillary action", "Surface tension", "High vaporization point"],
+            correct: 2,
+            rationale: "Surface tension is caused by cohesive hydrogen bonds pulling surface water molecules tightly together."
+          },
+          { q: "4. In a single water molecule, what charge is located near the hydrogen atoms?",
+            options: ["Partial negative (δ-)", "Full negative (-1)", "Partial positive (δ+)", "Neutral charge (0)"],
+            correct: 2,
+            rationale: "Because oxygen hoards the shared electrons, the hydrogen atoms are left with partial positive charges (δ+)."
+          },
+          { q: "5. Capillary action in plant stems is caused by which two combined forces?",
+            options: ["Cohesion and adhesion", "Ionic attraction and magnetism", "Gravity and covalent bonding", "Evaporation and denaturation"],
+            correct: 0,
+            rationale: "Adhesion pulls water up the sides of xylem tubes, while cohesion pulls other water molecules upward behind them."
+          },
+          { q: "6. Water resists rapid temperature changes because it has a high:",
+            options: ["Acidity level", "Specific heat capacity", "Viscosity", "Freezing rate"],
+            correct: 1,
+            rationale: "Water has a high specific heat, absorbing large amounts of thermal energy before breaking hydrogen bonds and heating up."
+          },
+          // Food, Digestion & Carbon (7-10)
+          { q: "7. What are the two primary purposes food serves for organisms?",
+            options: [
+              "Oxygen production and cell wall stiffening",
+              "Energy to produce ATP and raw materials to build cells",
+              "Direct storage of DNA and thermal cooling",
+              "Replacing water molecules and destroying toxins"
+            ],
+            correct: 1,
+            rationale: "Food supplies cellular energy (ATP via respiration) and matter (carbon, nitrogen, building blocks) for repair and growth."
+          },
+          { q: "8. What is the correct sequence of food traveling through the human alimentary canal?",
+            options: [
+              "Mouth → Stomach → Esophagus → Small Intestine → Large Intestine → Rectum → Anus",
+              "Mouth → Esophagus → Stomach → Small Intestine → Large Intestine (Colon) → Rectum → Anus",
+              "Mouth → Esophagus → Small Intestine → Stomach → Large Intestine → Anus → Rectum",
+              "Mouth → Stomach → Small Intestine → Large Intestine → Esophagus → Rectum → Anus"
+            ],
+            correct: 1,
+            rationale: "Food enters the mouth, passes through the esophagus, enters the stomach, moves to the small intestine, then the large intestine (colon), rectum, and out the anus."
+          },
+          { q: "9. How many valence electrons does a carbon atom have in its outer shell?",
+            options: ["2", "4", "6", "8"],
+            correct: 1,
+            rationale: "Carbon has 4 valence electrons, allowing it to form 4 strong covalent bonds with various atoms."
+          },
+          { q: "10. What is the relationship between monomers and polymers?",
+            options: [
+              "Polymers are broken down into single atoms called monomers.",
+              "Monomers are single building block subunits that link together to build a polymer.",
+              "Monomers are only found in inorganic minerals, while polymers are only found in cells.",
+              "Polymers are always proteins, while monomers are always carbohydrates."
+            ],
+            correct: 1,
+            rationale: "Monomers ('mono' = one) join together like beads on a necklace to form large, complex polymers ('poly' = many)."
+          },
+          // Macromolecules (11-18)
+          { q: "11. What is the monomer (single unit) of carbohydrates?",
+            options: ["Amino acid", "Glycerol", "Monosaccharide", "Nucleotide"],
+            correct: 2,
+            rationale: "Monosaccharides (like glucose) are single sugar units that link into polysaccharides (like starch)."
+          },
+          { q: "12. Which of the following is a polysaccharide used by plant cells for structural support in cell walls?",
+            options: ["Glycogen", "Cellulose", "Sucrose", "Hemoglobin"],
+            correct: 1,
+            rationale: "Cellulose provides rigidity to plant cell walls. Glycogen is animal energy storage; starch is plant energy storage."
+          },
+          { q: "13. What subunits typically combine to make up a triglyceride lipid?",
+            options: [
+              "One glycerol and three fatty acid tails",
+              "Chains of amino acids joined by peptide bonds",
+              "Five-carbon sugars bonded to phosphates",
+              "Repeated rings of glucose"
+            ],
+            correct: 0,
+            rationale: "Triglycerides are formed by bonding 1 glycerol molecule with 3 fatty acid chains."
+          },
+          { q: "14. Why are lipids well-suited for long-term energy storage compared to carbohydrates?",
+            options: [
+              "Lipids dissolve instantly in water.",
+              "Lipids contain more than twice the stored calories per gram compared to carbohydrates.",
+              "Lipids break down faster than simple sugars.",
+              "Lipids are made exclusively of nucleic acid bonds."
+            ],
+            correct: 1,
+            rationale: "Lipids are energy-dense nonpolar hydrocarbons, storing approximately 9 calories per gram compared to 4 calories in carbohydrates."
+          },
+          { q: "15. Which macromolecule is the principal component of the cell membrane bilayer?",
+            options: ["Triglycerides", "Phospholipids", "Glycogen", "Keratin"],
+            correct: 1,
+            rationale: "Phospholipids have a hydrophilic head and two hydrophobic tails, forming the cell membrane's protective bilayer."
+          },
+          { q: "16. What is the monomer of a protein?",
+            options: ["Nucleotide", "Fatty acid", "Amino acid", "Monosaccharide"],
+            correct: 2,
+            rationale: "Proteins are polymers built from 20 different amino acid monomers joined by peptide bonds."
+          },
+          { q: "17. Which of the following is a healthy, nutrient-rich dietary source of protein?",
+            options: ["White granulated sugar", "Eggs and lentils", "Butter and margarine", "Soda and sports drinks"],
+            correct: 1,
+            rationale: "Eggs, legumes (beans, lentils), lean meats, and nuts provide complete amino acids essential for protein synthesis."
+          },
+          { q: "18. What are the three components that make up every nucleotide?",
+            options: [
+              "Glycerol, fatty acid, and an R-group",
+              "5-carbon sugar, phosphate group, and nitrogenous base",
+              "Amino group, carboxyl group, and hydrogen",
+              "Glucose, fructose, and galactose"
+            ],
+            correct: 1,
+            rationale: "Every nucleotide contains a 5-carbon sugar (ribose or deoxyribose), a phosphate group, and a nitrogen base (A, T, C, G, or U)."
+          },
+          // Enzymes (19-25)
+          { q: "19. An enzyme belongs to which major category of macromolecules?",
+            options: ["Lipids", "Carbohydrates", "Proteins", "Nucleic acids"],
+            correct: 2,
+            rationale: "Enzymes are globular proteins folded into precise three-dimensional active conformations."
+          },
+          { q: "20. How do catalysts and enzymes accelerate chemical reactions?",
+            options: [
+              "By raising the temperature of the cell",
+              "By lowering the activation energy required",
+              "By adding more reactant molecules",
+              "By permanently changing into product molecules"
+            ],
+            correct: 1,
+            rationale: "Enzymes lower the activation energy barrier, allowing reactions to occur rapidly at normal body temperature."
+          },
+          { q: "21. The specific location on an enzyme where the substrate binds is called the:",
+            options: ["Peptide pocket", "Active site", "Polymer tail", "Denaturation point"],
+            correct: 1,
+            rationale: "The active site has a specific shape and charge complementary only to its matching substrate."
+          },
+          { q: "22. The 'Lock and Key' model describes what characteristic of enzymes?",
+            options: [
+              "Their ability to unlock and catalyze any chemical in the cell",
+              "The high specificity of an enzyme for only one particular substrate",
+              "The irreversible destruction of the enzyme after one reaction",
+              "Their requirement for metallic keys like iron"
+            ],
+            correct: 1,
+            rationale: "Just as only one specific key fits into a lock, an enzyme's active site fits only one specific substrate."
+          },
+          { q: "23. What happens when an enzyme is exposed to high temperatures above its optimum?",
+            options: [
+              "It catalyzes reactions infinitely faster.",
+              "It denatures, changing shape and losing its catalytic ability.",
+              "It turns into a lipid molecule.",
+              "It binds to extra water molecules to stay cold."
+            ],
+            correct: 1,
+            rationale: "Excessive heat breaks weak hydrogen bonds holding the protein together, causing denaturation (unfolding)."
+          },
+          { q: "24. After an enzyme catalyzes a reaction and releases the products, what happens to the enzyme?",
+            options: [
+              "It is broken down and excreted as waste.",
+              "It is unchanged and ready to catalyze another substrate molecule.",
+              "It turns into a substrate for the next reaction.",
+              "It permanently fuses with the product."
+            ],
+            correct: 1,
+            rationale: "Catalysts are never consumed or altered by the reactions they catalyze; they are reusable."
+          },
+          { q: "25. Most enzymes can be recognized because their names end with which suffix?",
+            options: ["-ose", "-ase", "-ide", "-ol"],
+            correct: 1,
+            rationale: "Enzymes typically end in '-ase' (e.g., lactase, amylase, catalase). Sugars typically end in '-ose' (e.g., glucose, lactose)."
+          }
+        ],
+        frqs: [
+          { q: "FRQ 1 (Water Properties): A tall redwood tree must move hundreds of gallons of water from roots in the ground up to needles 300 feet in the air without any mechanical pump. Explain how water's properties of adhesion and cohesion work together in capillary action to accomplish this.",
+            rubric: [
+              "1 pt: Definition of adhesion (water molecules attracted to xylem cell walls).",
+              "1 pt: Definition of cohesion (water molecules attracted to each other by hydrogen bonds).",
+              "2 pts: Explanation of how transpiration pulls the continuous chain of water molecules upward against gravity.",
+              "1 pt: Mention of hydrogen bonding as the underlying molecular cause."
+            ],
+            model: "Adhesion allows water molecules to stick to the hydrophilic cellulose walls of the xylem tubes inside the tree trunk. At the same time, cohesion causes water molecules to stick tightly to one another through hydrogen bonds. As water evaporates from leaves during transpiration, it pulls the cohesive column of water upward through capillary action, drawing water all the way from the roots without a pump."
+          },
+          { q: "FRQ 2 (Digestive Flow & Function): Trace a bite of food through the 7-step digestive pathway: Mouth → Esophagus → Stomach → Small Intestine → 6. Large Intestine (Colon) → 7. Rectum → 8. Anus. For at least TWO of these organs, describe its primary digestive or absorptive function.",
+            rubric: [
+              "2 pts: Correctly listing the sequence in order without missing organs.",
+              "1.5 pts: Accurate function for organ 1 (e.g., Stomach: acid & pepsin break down proteins).",
+              "1.5 pts: Accurate function for organ 2 (e.g., Small intestine: complete digestion & nutrient absorption; or Large intestine: water reabsorption)."
+            ],
+            model: "The pathway is: Mouth → Esophagus → Stomach → Small Intestine → 6. Large Intestine (Colon) → 7. Rectum → 8. Anus.\n1. Stomach: Produces hydrochloric acid and pepsin to churn and chemically digest proteins into smaller polypeptides.\n2. Small Intestine: Receives enzymes to finish digesting carbs, lipids, and proteins, then absorbs nutrients through villi into the bloodstream.\n3. Large Intestine: Reabsorbs excess water back into the body, compacting remaining indigestible matter into solid feces."
+          },
+          { q: "FRQ 3 (Carbon Chemistry): Why is carbon called the 'backbone of life'? In your answer, state how many valence electrons carbon possesses, what type of bonds it forms, and the variety of molecular shapes it can produce.",
+            rubric: [
+              "1 pt: Stating carbon has 4 valence electrons.",
+              "1 pt: Stating carbon forms strong covalent bonds (shares electrons).",
+              "2 pts: Describing that carbon can form 4 bonds at once, creating straight chains, branched trees, and rings.",
+              "1 pt: Explaining why this enables large, complex macromolecule polymers."
+            ],
+            model: "Carbon is the foundation of life because it has 4 valence electrons in its outer shell. This allows each carbon atom to form 4 strong covalent bonds with other atoms or other carbons. Carbon atoms can bond into straight chains, branched structures, and rings, and can form single, double, or triple bonds. This unmatched versatility allows cells to build millions of distinct macromolecules (carbs, lipids, proteins, nucleic acids)."
+          },
+          { q: "FRQ 4 (Macromolecule Comparison): Compare carbohydrates and lipids. (a) Identify the monomer or building subunits of each. (b) Compare their roles in energy storage (immediate vs. long-term). (c) Give one healthy food source for each.",
+            rubric: [
+              "1.5 pts: Correct subunits (Carbs: monosaccharides/glucose; Lipids: glycerol and fatty acids).",
+              "2 pts: Energy comparison (Carbs: quick, immediate energy; Lipids: long-term stored energy with 2x calorie density).",
+              "1.5 pts: Valid healthy foods (Carbs: whole grains, oatmeal, fruit; Lipids: avocados, olive oil, almonds)."
+            ],
+            model: "(a) Carbohydrates are built from monosaccharides (simple sugars like glucose). Lipids are constructed from glycerol and fatty acid chains.\n(b) Carbohydrates are the body's primary, immediate fuel source for quick ATP production. Lipids provide dense, long-term energy storage (storing over twice as much energy per gram) and build cell membranes.\n(c) A healthy carbohydrate source is whole oats or brown rice; a healthy lipid source is avocados or extra-virgin olive oil."
+          },
+          { q: "FRQ 5 (Enzyme Action & Denaturation): An experiment tests enzyme activity at 20°C, 37°C (normal body temperature), and 75°C. Predict at which temperature the enzyme will function best, and explain in detail what will happen to the enzyme's structure and activity at 75°C.",
+            rubric: [
+              "1 pt: Correctly predicting highest activity at 37°C (human body optimal temperature).",
+              "2 pts: Stating that at 75°C the enzyme denatures / unfolds its 3D active site.",
+              "2 pts: Explaining that the substrate can no longer fit into the misshapen active site, causing reaction rate to drop to zero."
+            ],
+            model: "The enzyme will function best at 37°C because this is the natural physiological temperature for human enzymes, providing sufficient kinetic collision without damaging protein structure. At 75°C, excessive heat will cause the enzyme to denature: thermal vibrations break weak hydrogen bonds, causing the protein to unfold. The active site loses its specific shape, the substrate can no longer bind (lock-and-key fit is lost), and reaction rate drops to zero."
+          }
+        ]
+      },
+
+      'test-2': {
+        id: 'test-2',
+        title: 'Biochemistry Practice Test 2 (Form B)',
+        subtitle: 'Standardized 9th Grade Exam &bull; 25 Multiple Choice &bull; 5 Free Response',
+        mcqs: [
+          // Water (1-6)
+          { q: "1. Why does solid ice float on the surface of liquid water in a lake during winter?",
+            options: [
+              "Ice contains dissolved air bubbles that make it lighter.",
+              "Water expands when it freezes, making solid ice less dense than liquid water.",
+              "Hydrogen bonds break completely when water reaches freezing temperatures.",
+              "Cold water molecules repel one another due to identical electrical charges."
+            ],
+            correct: 1,
+            rationale: "As water freezes below 4°C, hydrogen bonds lock into an open hexagonal lattice, spacing molecules farther apart and making ice less dense than liquid water."
+          },
+          { q: "2. A curved surface called a meniscus forms when water is placed in a glass graduated cylinder. What property causes water to climb the glass walls?",
+            options: ["Cohesion", "Adhesion", "Nonpolar repulsion", "Denaturation"],
+            correct: 1,
+            rationale: "Adhesion is the attraction between water and different molecules (the glass surface), causing water to creep up the cylinder edges."
+          },
+          { q: "3. What type of chemical bond holds the oxygen atom and hydrogen atoms together INSIDE a single water molecule?",
+            options: ["Hydrogen bond", "Polar covalent bond", "Ionic bond", "Peptide bond"],
+            correct: 1,
+            rationale: "Within a single H2O molecule, polar covalent bonds share electrons unequally between oxygen and hydrogen."
+          },
+          { q: "4. When humans sweat on a hot day, body heat is removed when water evaporates. This is due to water's:",
+            options: ["High heat of vaporization", "Low surface tension", "Ability to form nonpolar bonds", "Acidic pH"],
+            correct: 0,
+            rationale: "Evaporative cooling works because evaporating water carries away substantial thermal energy (heat of vaporization)."
+          },
+          { q: "5. Water is known as the 'universal biological solvent' because it readily dissolves:",
+            options: ["Nonpolar oils and waxes", "Only pure carbon structures", "Polar molecules and ionic compounds", "Gaseous helium only"],
+            correct: 2,
+            rationale: "Water's partial charges attract and dissolve ions (salts) and polar molecules (sugars), allowing nutrient transport."
+          },
+          { q: "6. How many total atoms make up a single water molecule?",
+            options: ["1 atom", "2 atoms", "3 atoms", "4 atoms"],
+            correct: 2,
+            rationale: "Water has 3 atoms total: 2 Hydrogen atoms + 1 Oxygen atom (H2O)."
+          },
+          // Food, Digestion & Carbon (7-10)
+          { q: "7. Organisms consume food primarily to yield cellular energy stored in molecules of:",
+            options: ["ATP", "Cellulose", "DNA", "RNA"],
+            correct: 0,
+            rationale: "Cellular respiration extracts chemical bond energy from digested food to synthesize ATP (adenosine triphosphate)."
+          },
+          { q: "8. In which organ of the human digestive tract does the greatest amount of chemical digestion and nutrient absorption occur?",
+            options: ["Mouth", "Stomach", "Small Intestine", "Large Intestine"],
+            correct: 2,
+            rationale: "The small intestine receives digestive enzymes from the pancreas and bile from the liver, absorbing nutrients through villi."
+          },
+          { q: "9. Why is the large intestine (colon) critical for maintaining human fluid homeostasis?",
+            options: [
+              "It produces bile to break down fats.",
+              "It reabsorbs water from indigestible food matter before elimination.",
+              "It secretes stomach acid to sterilize bacteria.",
+              "It absorbs simple sugars directly into the brain."
+            ],
+            correct: 1,
+            rationale: "The large intestine's major role is reabsorbing water to prevent dehydration and compacting feces."
+          },
+          { q: "10. Which process joins individual monomers together into a large polymer while releasing a water molecule?",
+            options: ["Hydrolysis", "Dehydration synthesis", "Denaturation", "Catalysis"],
+            correct: 1,
+            rationale: "Dehydration synthesis (condensation) connects monomers by removing an -OH from one and an -H from another, forming H2O."
+          },
+          // Macromolecules (11-18)
+          { q: "11. What is the chemical formula for glucose, the classic carbohydrate monosaccharide?",
+            options: ["CH₄", "C₆H₁₂O₆", "C₁₂H₂₂O₁₁", "H₂O₂"],
+            correct: 1,
+            rationale: "Glucose has a 1:2:1 ratio of carbon, hydrogen, and oxygen: C6H12O6."
+          },
+          { q: "12. In animal cells, excess carbohydrates are stored in the liver and muscles as:",
+            options: ["Starch", "Cellulose", "Glycogen", "Collagen"],
+            correct: 2,
+            rationale: "Glycogen is the polysaccharide animal cells use to store surplus glucose."
+          },
+          { q: "13. Why do lipids not dissolve in water?",
+            options: [
+              "Lipids are nonpolar and hydrophobic (water-fearing).",
+              "Lipids have strong ionic bonds.",
+              "Lipids are composed entirely of oxygen atoms.",
+              "Lipids carry strong positive and negative charges."
+            ],
+            correct: 0,
+            rationale: "Lipids are hydrocarbons with nonpolar covalent bonds, meaning polar water molecules cannot form hydrogen bonds with them."
+          },
+          { q: "14. A fat that has one or more double bonds between carbon atoms, resulting in a liquid oil at room temperature, is an:",
+            options: ["Unsaturated fat", "Saturated fat", "Amino acid", "Inorganic wax"],
+            correct: 0,
+            rationale: "Unsaturated fatty acids have double bonds that cause 'kinks' in the chain, keeping them liquid at room temperature (e.g., olive oil)."
+          },
+          { q: "15. What type of covalent bond joins two adjacent amino acids together in a protein chain?",
+            options: ["Hydrogen bond", "Peptide bond", "Phosphodiester bond", "Ionic bond"],
+            correct: 1,
+            rationale: "Amino acids are linked together by peptide bonds between the carboxyl group of one and the amino group of another."
+          },
+          { q: "16. Which of the following is a vital function carried out by proteins in the human body?",
+            options: [
+              "Providing fast 1-minute bursts of energy like glucose",
+              "Carrying oxygen via hemoglobin and fighting disease via antibodies",
+              "Storing hereditary instructions from generation to generation",
+              "Forming the hydrophobic wax on plant leaves"
+            ],
+            correct: 1,
+            rationale: "Hemoglobin (oxygen transport) and antibodies (immune defense) are specialized proteins."
+          },
+          { q: "17. DNA and RNA belong to which category of macromolecules?",
+            options: ["Proteins", "Lipids", "Carbohydrates", "Nucleic acids"],
+            correct: 3,
+            rationale: "DNA (deoxyribonucleic acid) and RNA (ribonucleic acid) are nucleic acids."
+          },
+          { q: "18. Which element is found in BOTH proteins and nucleic acids, but NOT in simple carbohydrates or lipids?",
+            options: ["Carbon", "Hydrogen", "Oxygen", "Nitrogen"],
+            correct: 3,
+            rationale: "Carbohydrates and lipids contain Carbon, Hydrogen, and Oxygen (CHO). Proteins (CHON) and Nucleic Acids (CHONP) both contain Nitrogen."
+          },
+          // Enzymes (19-25)
+          { q: "19. Activation energy is best described as the:",
+            options: [
+              "Energy released when a reaction is completely finished",
+              "Minimum energy required to start a chemical reaction",
+              "Energy stored within enzyme active sites",
+              "Maximum heat an organism can withstand before dying"
+            ],
+            correct: 1,
+            rationale: "Activation energy is the initial investment of energy required to break bonds in reactants so a reaction can begin."
+          },
+          { q: "20. How does an enzyme affect the free energy change (ΔG) of a chemical reaction?",
+            options: [
+              "It increases the total energy created.",
+              "It changes an endergonic reaction into an exergonic one.",
+              "It has no effect on the net overall energy change of the reaction.",
+              "It destroys half of the potential energy in the products."
+            ],
+            correct: 2,
+            rationale: "Enzymes only lower the activation energy barrier; they do not alter the starting or final energy levels of reactants and products."
+          },
+          { q: "21. What happens to the rate of an enzyme-controlled reaction when the temperature drops to near freezing (0°C)?",
+            options: [
+              "The enzyme denatures permanently.",
+              "The reaction rate drops drastically because molecules move slowly with fewer collisions.",
+              "The enzyme doubles its catalytic speed to stay warm.",
+              "The enzyme starts breaking down its own active site."
+            ],
+            correct: 1,
+            rationale: "Cold temperatures do not denature enzymes; instead, low kinetic energy reduces the frequency of collisions between enzyme and substrate."
+          },
+          { q: "22. Why will the enzyme lactase break down lactose into glucose and galactose, but fail to break down sucrose?",
+            options: [
+              "Sucrose is an inorganic rock that cannot be broken.",
+              "Lactase's active site is uniquely shaped to fit only lactose molecules.",
+              "Sucrose poisons and kills the lactase protein immediately.",
+              "Lactase works only inside plant cells, never in humans."
+            ],
+            correct: 1,
+            rationale: "Enzyme specificity: active sites only bind substrates with a complementary shape and chemical alignment."
+          },
+          { q: "23. When a substrate binds to an enzyme's active site, the temporary combined structure is termed the:",
+            options: ["Monomer chain", "Enzyme-Substrate Complex", "Polynucleotide helix", "Catalyst byproduct"],
+            correct: 1,
+            rationale: "While joined, the enzyme and substrate form the short-lived Enzyme-Substrate Complex."
+          },
+          { q: "24. Pepsin, an enzyme found in the human stomach, functions optimally at a pH of around 2. What would happen to pepsin if placed in the small intestine (pH ~8)?",
+            options: [
+              "It would become even more active.",
+              "It would denature due to the unfavorable pH and lose function.",
+              "It would turn into hydrochloric acid.",
+              "It would begin producing glucose."
+            ],
+            correct: 1,
+            rationale: "A drastic change in pH disrupts hydrogen and ionic bonds in the enzyme, denaturing its active site."
+          },
+          { q: "25. Which of the following substances is an enzyme?",
+            options: ["Sucrose", "Lipase", "Galactose", "Glycogen"],
+            correct: 1,
+            rationale: "Lipase ends in '-ase', which signifies an enzyme (breaks down lipids). Sucrose, galactose, and glycogen are carbohydrates."
+          }
+        ],
+        frqs: [
+          { q: "FRQ 1 (Water & Climate): Coastal cities often experience much milder winter and summer temperatures than inland cities at the same latitude. Explain how water's high specific heat capacity explains this phenomenon, and define specific heat capacity.",
+            rubric: [
+              "1 pt: Definition of high specific heat (amount of heat absorbed/lost for 1g to change 1°C).",
+              "2 pts: Explanation that large bodies of water absorb summer heat with little temperature change, cooling coastal air.",
+              "2 pts: Explanation that in winter, water slowly releases stored heat, warming coastal air."
+            ],
+            model: "Specific heat capacity is the amount of heat energy required to raise the temperature of 1 gram of a substance by 1°C. Water has an exceptionally high specific heat because much of the incoming heat is absorbed to break hydrogen bonds before the molecules move faster. In the summer, ocean water absorbs vast amounts of solar heat without getting excessively hot, cooling adjacent land. In winter, oceans slowly release this stored thermal energy back into the air, preventing extreme freezing in coastal areas."
+          },
+          { q: "FRQ 2 (Digestive Pathway & Absorption): List the 7 organs of the human digestive tract in sequence: Mouth → Esophagus → Stomach → Small Intestine → 6. Large Intestine (Colon) → 7. Rectum → 8. Anus. Identify where chemical digestion begins, and where undigested solid waste is temporarily stored prior to elimination.",
+            rubric: [
+              "2 pts: Stating the complete ordered pathway without errors.",
+              "1.5 pts: Identifying the mouth as where chemical digestion begins (salivary amylase digesting starch).",
+              "1.5 pts: Identifying the rectum as the temporary storage site for feces."
+            ],
+            model: "The sequence is: Mouth → Esophagus → Stomach → Small Intestine → 6. Large Intestine (Colon) → 7. Rectum → 8. Anus.\n- Chemical digestion begins in the mouth, where salivary amylase enzyme begins hydrolyzing carbohydrates (starch) into disaccharides.\n- Undigested solid waste (feces) is temporarily stored in the rectum before being expelled through the anus."
+          },
+          { q: "FRQ 3 (Monomers to Polymers): For each of the following macromolecules, provide both the monomer subunit and the resulting polymer: (a) Carbohydrates, (b) Proteins, and (c) Nucleic acids. Explain the general role of condensation/dehydration reactions in forming these polymers.",
+            rubric: [
+              "1 pt: Carbs: Monosaccharide (glucose) → Polysaccharide (starch, glycogen, cellulose).",
+              "1 pt: Proteins: Amino acids → Polypeptide.",
+              "1 pt: Nucleic Acids: Nucleotides → Polynucleotide (DNA / RNA).",
+              "2 pts: Explaining dehydration synthesis removes water to covalently bond monomers together."
+            ],
+            model: "(a) Carbohydrates: Monomer = Monosaccharide (e.g., glucose); Polymer = Polysaccharide (e.g., starch, cellulose).\n(b) Proteins: Monomer = Amino Acid; Polymer = Polypeptide / Protein.\n(c) Nucleic Acids: Monomer = Nucleotide; Polymer = Polynucleotide (DNA / RNA).\nIn dehydration synthesis (condensation reactions), an -OH group from one monomer and an -H atom from another are removed, releasing a water molecule (H2O) while forming a new strong covalent bond linking the subunits together into a polymer chain."
+          },
+          { q: "FRQ 4 (Dietary Fuel for Athletes): A cross-country runner eats a large bowl of pasta (carbohydrates) the night before a race, but their body also relies on stored fat (lipids) during long training runs. Explain the biochemical difference in how carbohydrates and lipids provide energy to body cells.",
+            rubric: [
+              "2 pts: Explaining carbohydrates provide quick, immediate ATP energy via accessible glucose.",
+              "2 pts: Explaining lipids provide dense, long-term sustained energy (9 kcal/g vs 4 kcal/g) used during endurance.",
+              "1 pt: Mentioning that carbs break down rapidly in cytoplasm/mitochondria compared to slow lipid mobilization."
+            ],
+            model: "Carbohydrates are broken down rapidly into glucose, which enters glycolysis and cellular respiration to generate immediate ATP energy required for high-intensity muscle contractions. In contrast, lipids are dense hydrocarbons that contain more than twice the energy per gram (9 calories/gram vs 4 calories/gram). Lipids take longer to mobilize and metabolize, serving as a long-term energy reserve that powers muscles during extended endurance events once easily accessible carbohydrate stores decline."
+          },
+          { q: "FRQ 5 (Enzyme Graph & pH): Imagine a graph plotting enzyme activity against pH for two enzymes: Pepsin (stomach) peaks at pH 2, while Trypsin (small intestine) peaks at pH 8. Explain why these two enzymes have different optimal pH values, and what would happen to trypsin if placed in a beaker of pH 1.5 acid.",
+            rubric: [
+              "2 pts: Stating they evolved to function in different anatomical locations (acidic stomach vs alkaline intestine).",
+              "2 pts: Explaining that in pH 1.5 acid, trypsin denatures (active site loses 3D shape).",
+              "1 pt: Explaining that loss of active site shape prevents substrate binding, stopping catalysis."
+            ],
+            model: "Pepsin and trypsin have different optimal pH values because they evolved to function in different anatomical environments: pepsin works in the stomach surrounded by hydrochloric acid (pH 1.5–2.5), whereas trypsin works in the small intestine where bicarbonate raises the pH to around 8. If trypsin is placed into pH 1.5 acid, the extreme excess of H+ ions will alter electrical charges on its amino acids, disrupting internal ionic and hydrogen bonds. Trypsin will denature (unfold), its active site will be ruined, and it will be completely incapable of binding substrates."
+          }
+        ]
+      },
+
+      'test-3': {
+        id: 'test-3',
+        title: 'Biochemistry Practice Test 3 (Form C)',
+        subtitle: 'Standardized 9th Grade Exam &bull; 25 Multiple Choice &bull; 5 Free Response',
+        mcqs: [
+          // Water (1-6)
+          { q: "1. What makes water molecules stick to the inside of glass test tubes or plant vascular tissue?",
+            options: ["Adhesion", "Cohesion", "Nonpolar repulsion", "Covalent sharing"],
+            correct: 0,
+            rationale: "Adhesion is the attraction between water and a DIFFERENT surface (like glass or plant xylem)."
+          },
+          { q: "2. The weak electrostatic attractions between the partial positive hydrogen of one water molecule and the partial negative oxygen of another are called:",
+            options: ["Covalent bonds", "Hydrogen bonds", "Ionic bonds", "Peptide bonds"],
+            correct: 1,
+            rationale: "Hydrogen bonds form between adjacent polar water molecules due to attractions between partial opposite charges."
+          },
+          { q: "3. If pure salad oil is poured into a beaker of water, the oil separates and floats on top. Why?",
+            options: [
+              "Oil is nonpolar and hydrophobic, so it cannot form hydrogen bonds with polar water.",
+              "Oil is too acidic to mix with neutral water.",
+              "Water molecules destroy the chemical bonds in oil molecules.",
+              "Water is nonpolar while oil is strongly ionic."
+            ],
+            correct: 0,
+            rationale: "Water is polar and forms hydrogen bonds with itself, excluding nonpolar, hydrophobic lipid oils."
+          },
+          { q: "4. What is the pH value of pure neutral water at room temperature?",
+            options: ["pH 1", "pH 7", "pH 14", "pH 0"],
+            correct: 1,
+            rationale: "Pure water has an equal concentration of H+ and OH- ions, representing neutral pH 7."
+          },
+          { q: "5. Why do water droplets bead up into spheres on a freshly waxed car surface?",
+            options: [
+              "Cohesive forces pull the water molecules together, while nonpolar wax repels them.",
+              "The wax forms covalent bonds with the water droplet.",
+              "The wax increases the temperature, causing water to boil.",
+              "Adhesion between water and wax is stronger than cohesion."
+            ],
+            correct: 0,
+            rationale: "Water molecules are cohesive (stick to each other), minimizing contact area with the nonpolar, hydrophobic wax."
+          },
+          { q: "6. During a winter freeze, how does the floating ice layer protect aquatic life at the bottom of a pond?",
+            options: [
+              "Ice heats the water beneath it to boiling.",
+              "The ice acts as an insulating blanket, keeping the liquid water underneath at 4°C.",
+              "Ice releases oxygen gas directly into fish gills.",
+              "Ice absorbs all the toxins produced by dead algae."
+            ],
+            correct: 1,
+            rationale: "Floating ice insulates the deeper water underneath from cold air, preventing lakes from freezing solid."
+          },
+          // Food, Digestion & Carbon (7-10)
+          { q: "7. Heterotrophic organisms like humans must consume organic food because they:",
+            options: [
+              "Cannot synthesize their own organic molecules from sunlight via photosynthesis",
+              "Need food to produce new carbon atoms from scratch",
+              "Can only absorb energy by drinking pure mineral water",
+              "Do not possess cellular mitochondria"
+            ],
+            correct: 0,
+            rationale: "Heterotrophs rely on eating autotrophs or other organisms to acquire pre-formed organic compounds for matter and energy."
+          },
+          { q: "8. Food travels through the human digestive system in which order?",
+            options: [
+              "Mouth → Esophagus → Stomach → Small Intestine → 6. Large Intestine (Colon) → 7. Rectum → 8. Anus",
+              "Mouth → Stomach → Small Intestine → Esophagus → Large Intestine → Rectum → Anus",
+              "Mouth → Small Intestine → Stomach → Large Intestine → Esophagus → Rectum → Anus",
+              "Mouth → Esophagus → Large Intestine → Small Intestine → Stomach → Rectum → Anus"
+            ],
+            correct: 0,
+            rationale: "Food moves through Mouth, Esophagus, Stomach, Small Intestine, Large Intestine, Rectum, and Anus."
+          },
+          { q: "9. Why is silicon rarely used instead of carbon as the chemical backbone of living things, even though silicon also has 4 valence electrons?",
+            options: [
+              "Silicon cannot form any covalent bonds.",
+              "Silicon-silicon bonds are too large and weak to form stable complex polymers in water.",
+              "Silicon is an imaginary element not found on Earth.",
+              "Silicon only bonds with helium."
+            ],
+            correct: 1,
+            rationale: "Carbon's smaller atomic radius allows strong, stable C-C bonds that form sturdy rings and chains in aqueous cells."
+          },
+          { q: "10. In living cells, what reaction breaks a polymer down into individual monomers by ADDING water?",
+            options: ["Hydrolysis", "Polymerization", "Dehydration synthesis", "Denaturation"],
+            correct: 0,
+            rationale: "Hydrolysis ('hydro' = water, 'lysis' = split) uses H2O to cleave covalent bonds between monomers during digestion."
+          },
+          // Macromolecules (11-18)
+          { q: "11. Which of the following is a monosaccharide (single simple sugar)?",
+            options: ["Fructose", "Starch", "Cellulose", "Glycogen"],
+            correct: 0,
+            rationale: "Fructose, glucose, and galactose are simple 6-carbon monosaccharides. Starch, cellulose, and glycogen are large polysaccharides."
+          },
+          { q: "12. In plants, surplus glucose created during photosynthesis is stored as:",
+            options: ["Starch", "Glycogen", "Keratin", "Hemoglobin"],
+            correct: 0,
+            rationale: "Plants store surplus chemical energy as starch (e.g., in potatoes and wheat grains)."
+          },
+          { q: "13. What feature characterizes healthy unsaturated fatty acids like those found in olive oil?",
+            options: [
+              "Only single bonds between carbons, making them solid at room temperature",
+              "One or more carbon-carbon double bonds (C=C), making them liquid oils at room temperature",
+              "A backbone made of pure amino acid chains",
+              "High concentrations of phosphorus atoms"
+            ],
+            correct: 1,
+            rationale: "Unsaturated fats have C=C double bonds that produce kinks in the chain, preventing tight packing and keeping them liquid at room temp."
+          },
+          { q: "14. Which macromolecule group includes cholesterol, steroid hormones, waxes, and fats?",
+            options: ["Carbohydrates", "Lipids", "Proteins", "Nucleic acids"],
+            correct: 1,
+            rationale: "Lipids encompass triglycerides (fats/oils), phospholipids, waxes, and steroids like cholesterol."
+          },
+          { q: "15. What gives each of the 20 biological amino acids its unique chemical properties?",
+            options: [
+              "Its variable R-group (side chain)",
+              "Its phosphate group",
+              "Its 5-carbon sugar",
+              "The number of nitrogen atoms in its peptide bond"
+            ],
+            correct: 0,
+            rationale: "All 20 amino acids share an amino group, a carboxyl group, and a central carbon; only the variable R-group differs."
+          },
+          { q: "16. Which macromolecule group contains antibodies that defend against viral and bacterial infections?",
+            options: ["Proteins", "Carbohydrates", "Lipids", "Nucleic acids"],
+            correct: 0,
+            rationale: "Antibodies are specialized protective proteins synthesized by white blood cells."
+          },
+          { q: "17. What is the fundamental primary role of DNA in cells?",
+            options: [
+              "Providing structural insulation for nerves",
+              "Directly providing fast ATP for muscle flexing",
+              "Storing genetic code instructions to direct protein synthesis",
+              "Catalyzing chemical reactions in the stomach"
+            ],
+            correct: 2,
+            rationale: "DNA stores hereditary information that encodes the amino acid sequence for all cellular proteins."
+          },
+          { q: "18. Which four elements make up over 96% of the mass of all living organisms?",
+            options: [
+              "Carbon, Hydrogen, Oxygen, and Nitrogen (CHON)",
+              "Iron, Lead, Gold, and Silver",
+              "Sodium, Chlorine, Potassium, and Calcium",
+              "Helium, Neon, Argon, and Xenon"
+            ],
+            correct: 0,
+            rationale: "CHON (Carbon, Hydrogen, Oxygen, Nitrogen) constitutes the vast majority of organic living biomass."
+          },
+          // Enzymes (19-25)
+          { q: "19. Look at an energy diagram for a chemical reaction: with an enzyme, the peak of the curve is:",
+            options: [
+              "Much higher, meaning more activation energy is needed",
+              "Much lower, meaning less activation energy is required",
+              "Shifted to the right by several minutes",
+              "Identical to the uncatalyzed reaction"
+            ],
+            correct: 1,
+            rationale: "Enzymes lower the peak of the activation energy hill, allowing the reaction to proceed with less initial energy input."
+          },
+          { q: "20. The concept that an enzyme's active site adjusts its shape slightly to clasp the substrate more tightly is known as:",
+            options: ["Induced fit", "Denaturation", "Hydrolysis", "Polymerization"],
+            correct: 0,
+            rationale: "The induced fit model explains that the enzyme hugs the substrate slightly upon binding to strain bonds."
+          },
+          { q: "21. Why can one single enzyme molecule catalyze thousands of substrate reactions every minute?",
+            options: [
+              "Enzymes are unchanged and never consumed by the reaction.",
+              "Enzymes multiply by cell division during the reaction.",
+              "Enzymes absorb electrons from air molecules.",
+              "Enzymes turn into the substrate after each reaction."
+            ],
+            correct: 0,
+            rationale: "Because enzymes are unaffected catalysts, they immediately release products and accept a fresh substrate."
+          },
+          { q: "22. In the human mouth, salivary amylase breaks down starch. Why does this enzyme stop working once it enters the stomach?",
+            options: [
+              "The extreme acidity (pH 2) of the stomach denatures salivary amylase.",
+              "The mouth enzyme runs out of energy.",
+              "There are no starch molecules in the stomach.",
+              "The stomach is too cold for amylase."
+            ],
+            correct: 0,
+            rationale: "Salivary amylase functions at mouth pH ~7. The acidic stomach environment (pH 2) denatures its active site."
+          },
+          { q: "23. A chemical that binds to an enzyme's active site and prevents the real substrate from entering is called a:",
+            options: ["Competitive inhibitor", "Coenzyme", "Monomer activator", "Hydrolytic product"],
+            correct: 0,
+            rationale: "Competitive inhibitors compete directly with the substrate for access to the active site."
+          },
+          { q: "24. Catalase is an enzyme in animal cells that breaks down poisonous hydrogen peroxide (H₂O₂) into:",
+            options: ["Water and oxygen gas (H₂O + O₂)", "Pure carbon and nitrogen", "Glucose and lactose", "Hydrochloric acid"],
+            correct: 0,
+            rationale: "Catalase decomposes toxic H2O2 into harmless water (H2O) and bubbling oxygen gas (O2)."
+          },
+          { q: "25. Which enzyme is responsible for hydrolyzing lipids into glycerol and fatty acids?",
+            options: ["Amylase", "Lipase", "Pepsin", "DNA Polymerase"],
+            correct: 1,
+            rationale: "Lipase breaks down lipids. Amylase digests starch; pepsin digests proteins."
+          }
+        ],
+        frqs: [
+          { q: "FRQ 1 (Water Polarity & Hydrogen Bonding): Draw or describe the polarity of a water molecule. Explain how the polar covalent bonds inside the molecule lead directly to hydrogen bonding between neighboring water molecules.",
+            rubric: [
+              "1.5 pts: Describing oxygen's electronegativity pulling electrons, giving oxygen a partial negative charge (δ-) and hydrogens partial positive charges (δ+).",
+              "1.5 pts: Stating that polar covalent bonds are internal to the H2O molecule.",
+              "2 pts: Explaining that the negative oxygen of one water molecule attracts the positive hydrogen of an adjacent water molecule to form an intermolecular hydrogen bond."
+            ],
+            model: "A water molecule consists of 1 oxygen atom bonded to 2 hydrogen atoms via polar covalent bonds. Because oxygen has a higher electronegativity, it pulls shared electrons closer to itself, giving the oxygen atom a partial negative charge (δ-) and leaving the hydrogen atoms with partial positive charges (δ+). These opposite partial charges between adjacent water molecules create electrostatic attractions: the negative oxygen of one water molecule is attracted to the positive hydrogen of a neighboring water molecule, forming a hydrogen bond."
+          },
+          { q: "FRQ 2 (Digestion of a Balanced Meal): Suppose a student eats a meal of grilled chicken (protein) and sweet potato (carbohydrate). (a) List the complete 7-organ digestive pathway in order from ingestion to elimination. (b) Explain where and how the chicken is broken down into amino acids.",
+            rubric: [
+              "2 pts: Listing the pathway: Mouth → Esophagus → Stomach → Small Intestine → 6. Large Intestine (Colon) → 7. Rectum → 8. Anus.",
+              "1.5 pts: Explaining protein breakdown begins in the stomach with acid (HCl) and pepsin enzyme.",
+              "1.5 pts: Explaining protein digestion finishes in the small intestine where proteases split peptides into amino acids for absorption."
+            ],
+            model: "(a) Digestive sequence: Mouth → Esophagus → Stomach → Small Intestine → 6. Large Intestine (Colon) → 7. Rectum → 8. Anus.\n(b) The chicken protein passes through the esophagus to the stomach, where hydrochloric acid denatures the protein and pepsin enzyme cuts large proteins into smaller polypeptide fragments. Next, in the small intestine, pancreatic proteases (such as trypsin) hydrolyze the fragments down into individual amino acid monomers, which are absorbed across the small intestine's villi into capillaries."
+          },
+          { q: "FRQ 3 (The Chemistry of Life - CHONP): The four major macromolecules are built primarily from Carbon, Hydrogen, Oxygen, Nitrogen, and Phosphorus (CHONP). State which of these elements are present in: (a) Carbohydrates, (b) Lipids, (c) Proteins, and (d) Nucleic acids.",
+            rubric: [
+              "1 pt: Carbohydrates = C, H, O (in 1:2:1 ratio).",
+              "1 pt: Lipids = C, H, O (with P in phospholipids).",
+              "1.5 pts: Proteins = C, H, O, N (and sulfur).",
+              "1.5 pts: Nucleic Acids = C, H, O, N, P."
+            ],
+            model: "(a) Carbohydrates contain Carbon, Hydrogen, and Oxygen (CHO).\n(b) Lipids contain Carbon, Hydrogen, and Oxygen (CHO) (and Phosphorus in cell membrane phospholipids).\n(c) Proteins contain Carbon, Hydrogen, Oxygen, and Nitrogen (CHON) (frequently with trace sulfur).\n(d) Nucleic Acids contain Carbon, Hydrogen, Oxygen, Nitrogen, and Phosphorus (CHONP) (sugar + phosphate group + nitrogenous base)."
+          },
+          { q: "FRQ 4 (Biological Macromolecule Functions): Select two of the four macromolecule classes and explain how their molecular structure is directly adapted to their biological function in living organisms.",
+            rubric: [
+              "2.5 pts: Accurate structure-function analysis for macromolecule 1 (e.g., Phospholipids with polar head and nonpolar tails creating a bilayer).",
+              "2.5 pts: Accurate structure-function analysis for macromolecule 2 (e.g., Carbohydrates like cellulose with rigid cross-linked chains providing plant wall strength; or Proteins folded into active sites)."
+            ],
+            model: "1. Phospholipids (Lipids): A phospholipid possesses a polar hydrophilic phosphate head and two nonpolar hydrophobic fatty acid tails. When surrounded by water inside and outside the cell, the tails point inward toward each other while the heads face water, spontaneously forming a flexible, semi-permeable bilayer that regulates what enters and leaves the cell.\n2. Proteins: Proteins are composed of chains of amino acids whose R-groups interact through hydrogen, ionic, and disulfide bonds to fold into precise 3-dimensional shapes. In enzymes, this folding produces a complementary 'active site' pocket that precisely fits a specific substrate, enabling high catalytic speed and specificity."
+          },
+          { q: "FRQ 5 (Enzyme Reaction Rates & Substrate Concentration): In a laboratory experiment, a student measures the rate of an enzyme reaction as they gradually add more substrate. At first, the reaction rate increases rapidly, but eventually it plateaus at a maximum speed (Vmax). Explain why the rate initially increases, and why it reaches a plateau.",
+            rubric: [
+              "2 pts: Stating that initially, adding more substrate increases collisions between substrate and open enzyme active sites.",
+              "2 pts: Explaining that the plateau occurs when all enzyme active sites are fully saturated (working at maximum capacity).",
+              "1 pt: Stating that to increase the rate beyond the plateau, more enzyme must be added."
+            ],
+            model: "Initially, adding more substrate increases the rate of reaction because there are plenty of available enzyme active sites. More substrate molecules mean more frequent molecular collisions between substrate and active sites, producing more product per second. However, the curve plateaus at a maximum speed because the enzymes become 'saturated.' At this point, every enzyme's active site is continuously occupied and working as fast as possible. Adding more substrate cannot speed up the reaction further unless more enzyme molecules are added."
+          }
+        ]
+      }
+    };
+
+    let currentActiveTab = 'study-guide';
+    let userTestAnswers = { 'test-1': {}, 'test-2': {}, 'test-3': {} };
+
+    function switchTab(tabId) {
+      currentActiveTab = tabId;
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.className = "tab-btn px-4 py-2 rounded-xl text-xs font-semibold transition flex items-center gap-1.5 bg-slate-100 text-slate-700 hover:bg-slate-200";
+      });
+      const activeBtn = document.getElementById('tabBtn-' + tabId);
+      if (activeBtn) {
+        activeBtn.className = "tab-btn px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 bg-bio-600 text-white shadow-sm shadow-bio-600/20";
+      }
+
+      if (tabId === 'study-guide') {
+        document.getElementById('tab-study-guide').style.display = 'block';
+        document.getElementById('test-view-container').style.display = 'none';
+      } else {
+        document.getElementById('tab-study-guide').style.display = 'none';
+        document.getElementById('test-view-container').style.display = 'block';
+        renderPracticeTest(tabId);
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function renderPracticeTest(testKey) {
+      const data = practiceTests[testKey];
+      const container = document.getElementById('test-view-container');
+      if (!data || !container) return;
+
+      let mcqHtml = data.mcqs.map((mcq, idx) => {
+        const qNum = idx + 1;
+        const selectedOpt = userTestAnswers[testKey][idx];
+        const isAnswered = selectedOpt !== undefined;
+
+        let optionsHtml = mcq.options.map((opt, oIdx) => {
+          const letter = String.fromCharCode(65 + oIdx);
+          const isSelected = selectedOpt === oIdx;
+          return `
+            <label class="flex items-start gap-2.5 p-3 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 transition cursor-pointer text-xs font-medium test-opt-${qNum}" id="opt-label-${testKey}-${idx}-${oIdx}">
+              <input type="radio" name="test-${testKey}-q${idx}" value="${oIdx}" ${isSelected ? 'checked' : ''} onchange="recordAnswer('${testKey}', ${idx}, ${oIdx})" class="mt-0.5 text-bio-600 focus:ring-bio-500">
+              <span class="font-bold text-slate-700">${letter}.</span>
+              <span class="text-slate-800">${opt}</span>
+            </label>
+          `;
+        }).join('');
+
+        return `
+          <div class="card-box bg-white p-5 rounded-2xl border border-slate-200 shadow-sm" id="mcq-card-${testKey}-${idx}">
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="badge-pill bg-slate-100 text-slate-700 font-bold text-[11px]">MCQ #${qNum} &bull; 1 Point</span>
+              <span class="text-[11px] font-semibold text-slate-400" id="feedback-badge-${testKey}-${idx}">Unanswered</span>
+            </div>
+            <p class="font-bold text-slate-900 text-sm mb-3">${mcq.q}</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-2">
+              ${optionsHtml}
+            </div>
+            <div id="explanation-${testKey}-${idx}" class="hidden mt-3 p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs space-y-1">
+              <!-- Injected on grade -->
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      let frqHtml = data.frqs.map((frq, fIdx) => {
+        const frqNum = fIdx + 1;
+        let rubricItems = frq.rubric.map(r => `<li class="text-[11px] text-slate-600">${r}</li>`).join('');
+        return `
+          <div class="card-box bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+            <div class="flex items-center justify-between mb-2">
+              <span class="badge-pill bg-emerald-100 text-emerald-800 font-bold text-[11px]">Free Response #${frqNum} &bull; 5 Points</span>
+              <span class="text-xs text-slate-400">Written Section</span>
+            </div>
+            <h4 class="font-bold text-slate-900 text-sm mb-2">${frq.q}</h4>
+            
+            <div class="no-print my-3">
+              <textarea placeholder="Type your practice response here (or handwrite when printed)..." rows="4" class="w-full p-3 text-xs border border-slate-200 rounded-xl focus:ring-2 focus:ring-bio-500 focus:outline-none"></textarea>
+            </div>
+
+            <div class="mt-3 pt-3 border-t border-slate-100">
+              <button onclick="toggleAnswer('frq-ans-${testKey}-${fIdx}')" class="text-xs font-semibold text-bio-700 hover:text-bio-800 flex items-center gap-1">
+                <span id="frq-ans-${testKey}-${fIdx}-icon">▶</span> View Scoring Rubric &amp; Model Answer
+              </button>
+              <div id="frq-ans-${testKey}-${fIdx}" class="answer-content hidden mt-3 p-4 bg-emerald-50/70 border border-emerald-200 rounded-xl text-xs space-y-2.5">
+                <div>
+                  <span class="font-bold text-emerald-950 block mb-1">Teacher Grading Rubric (5 Points):</span>
+                  <ul class="list-disc pl-5 space-y-0.5">
+                    ${rubricItems}
+                  </ul>
+                </div>
+                <div class="pt-2 border-t border-emerald-200">
+                  <span class="font-bold text-emerald-950 block mb-0.5">Exemplary Full-Score Response:</span>
+                  <p class="text-slate-700 whitespace-pre-line">${frq.model}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      container.innerHTML = `
+        <div class="p-5 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-700 text-white shadow-md flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="px-2 py-0.5 bg-white/20 rounded-md font-bold text-[11px] uppercase tracking-wider">Formal Exam Simulation</span>
+              <span class="text-xs text-emerald-100">Standardized Scoring Scale</span>
+            </div>
+            <h2 class="text-xl font-bold">${data.title}</h2>
+            <p class="text-xs text-emerald-100 mt-0.5">${data.subtitle}</p>
+          </div>
+
+          <!-- Grade Test Button -->
+          <div class="flex items-center gap-2 no-print shrink-0">
+            <button onclick="gradePracticeTest('${testKey}')" class="px-4 py-2 bg-white text-emerald-800 hover:bg-emerald-50 rounded-xl font-bold text-xs shadow-sm transition">
+              ✅ Grade Multiple Choice
+            </button>
+            <button onclick="resetPracticeTest('${testKey}')" class="px-3 py-2 bg-emerald-800/80 hover:bg-emerald-900 text-white rounded-xl text-xs transition">
+              Reset
+            </button>
+          </div>
+        </div>
+
+        <!-- Grade Result Banner (Hidden initially) -->
+        <div id="grade-summary-banner-${testKey}" class="hidden p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
+          <!-- Populated upon submission -->
+        </div>
+
+        <!-- Section 1: MCQ -->
+        <div class="space-y-4">
+          <div class="flex items-center justify-between border-b pb-2 border-slate-200">
+            <h3 class="text-base font-bold text-slate-900">Part 1: Multiple Choice Questions (25 Questions &bull; 25 Points)</h3>
+            <span class="text-xs font-semibold text-slate-500">Pick the best answer</span>
+          </div>
+          <div class="space-y-4">
+            ${mcqHtml}
+          </div>
+        </div>
+
+        <!-- Section 2: FRQ -->
+        <div class="space-y-4 pt-6">
+          <div class="flex items-center justify-between border-b pb-2 border-slate-200">
+            <h3 class="text-base font-bold text-slate-900">Part 2: Free Response Written Questions (5 Questions &bull; 25 Points)</h3>
+            <span class="text-xs font-semibold text-slate-500">5 pts each &bull; Written analysis</span>
+          </div>
+          <div class="space-y-4">
+            ${frqHtml}
+          </div>
+        </div>
+      `;
+    }
+
+    function recordAnswer(testKey, qIndex, optIndex) {
+      if (!userTestAnswers[testKey]) userTestAnswers[testKey] = {};
+      userTestAnswers[testKey][qIndex] = optIndex;
+      const badge = document.getElementById(`feedback-badge-${testKey}-${qIndex}`);
+      if (badge) {
+        badge.textContent = "Answered";
+        badge.className = "text-[11px] font-semibold text-bio-600";
+      }
+    }
+
+    function gradePracticeTest(testKey) {
+      const data = practiceTests[testKey];
+      if (!data) return;
+
+      let score = 0;
+      const total = data.mcqs.length;
+      let unanswered = 0;
+
+      data.mcqs.forEach((mcq, idx) => {
+        const userChoice = userTestAnswers[testKey] ? userTestAnswers[testKey][idx] : undefined;
+        const card = document.getElementById(`mcq-card-${testKey}-${idx}`);
+        const badge = document.getElementById(`feedback-badge-${testKey}-${idx}`);
+        const expBox = document.getElementById(`explanation-${testKey}-${idx}`);
+
+        // Reset label highlights
+        for (let i = 0; i < 4; i++) {
+          const lbl = document.getElementById(`opt-label-${testKey}-${idx}-${i}`);
+          if (lbl) {
+            lbl.className = "flex items-start gap-2.5 p-3 rounded-xl border border-slate-200 bg-white transition cursor-pointer text-xs font-medium";
+          }
+        }
+
+        if (userChoice === undefined) {
+          unanswered++;
+          badge.textContent = "⚠️ Skipped";
+          badge.className = "text-[11px] font-bold text-amber-600";
+        } else if (userChoice === mcq.correct) {
+          score++;
+          badge.textContent = "✅ Correct (+1)";
+          badge.className = "text-[11px] font-bold text-emerald-600";
+          const correctLabel = document.getElementById(`opt-label-${testKey}-${idx}-${userChoice}`);
+          if (correctLabel) {
+            correctLabel.className = "flex items-start gap-2.5 p-3 rounded-xl border-2 border-emerald-500 bg-emerald-50/70 text-xs font-semibold";
+          }
+        } else {
+          badge.textContent = "❌ Incorrect (0)";
+          badge.className = "text-[11px] font-bold text-rose-600";
+          const wrongLabel = document.getElementById(`opt-label-${testKey}-${idx}-${userChoice}`);
+          if (wrongLabel) {
+            wrongLabel.className = "flex items-start gap-2.5 p-3 rounded-xl border-2 border-rose-400 bg-rose-50/70 text-xs font-medium";
+          }
+          const correctLabel = document.getElementById(`opt-label-${testKey}-${idx}-${mcq.correct}`);
+          if (correctLabel) {
+            correctLabel.className = "flex items-start gap-2.5 p-3 rounded-xl border-2 border-emerald-500 bg-emerald-50/70 text-xs font-semibold";
+          }
+        }
+
+        // Show rationale
+        if (expBox) {
+          expBox.classList.remove('hidden');
+          expBox.innerHTML = `
+            <div class="font-bold text-slate-800">Correct Answer: ${String.fromCharCode(65 + mcq.correct)}. ${mcq.options[mcq.correct]}</div>
+            <p class="text-slate-600 mt-1">${mcq.rationale}</p>
+          `;
+        }
+      });
+
+      const pct = Math.round((score / total) * 100);
+      let grade = 'F';
+      let colorClass = 'text-rose-600';
+      if (pct >= 90) { grade = 'A'; colorClass = 'text-emerald-600'; }
+      else if (pct >= 80) { grade = 'B'; colorClass = 'text-emerald-700'; }
+      else if (pct >= 70) { grade = 'C'; colorClass = 'text-yellow-600'; }
+      else if (pct >= 60) { grade = 'D'; colorClass = 'text-amber-600'; }
+
+      const banner = document.getElementById(`grade-summary-banner-${testKey}`);
+      if (banner) {
+        banner.classList.remove('hidden');
+        banner.innerHTML = `
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-100">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Multiple Choice Exam Report</span>
+              <h3 class="text-2xl font-extrabold text-slate-900 mt-0.5">MCQ Score: ${score} / ${total} (<span class="${colorClass}">${pct}% &bull; Grade ${grade}</span>)</h3>
+              <p class="text-xs text-slate-500 mt-1">Review the explanations below for every question to see what was missed.</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="p-3 rounded-xl bg-slate-100 text-center font-bold text-xs text-slate-700">
+                Water: Q1-6<br><span class="text-bio-700 font-semibold">6 Qs</span>
+              </span>
+              <span class="p-3 rounded-xl bg-slate-100 text-center font-bold text-xs text-slate-700">
+                Digestion &amp; Carbon: Q7-10<br><span class="text-bio-700 font-semibold">4 Qs</span>
+              </span>
+              <span class="p-3 rounded-xl bg-slate-100 text-center font-bold text-xs text-slate-700">
+                Macromolecules: Q11-18<br><span class="text-bio-700 font-semibold">8 Qs</span>
+              </span>
+              <span class="p-3 rounded-xl bg-slate-100 text-center font-bold text-xs text-slate-700">
+                Enzymes: Q19-25<br><span class="text-bio-700 font-semibold">7 Qs</span>
+              </span>
+            </div>
+          </div>
+          ${unanswered > 0 ? `<p class="mt-2 text-xs font-semibold text-amber-700">⚠️ Notice: You left ${unanswered} question(s) unanswered.</p>` : ''}
+        `;
+        banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+
+    function resetPracticeTest(testKey) {
+      userTestAnswers[testKey] = {};
+      renderPracticeTest(testKey);
+    }
+
+    function toggleAnswer(id) {
+      const el = document.getElementById(id);
+      const icon = document.getElementById(id + '-icon');
+      if (!el) return;
+
+      if (el.classList.contains('hidden')) {
+        el.classList.remove('hidden');
+        if (icon) icon.textContent = '▼';
+      } else {
+        el.classList.add('hidden');
+        if (icon) icon.textContent = '▶';
+      }
+    }
+
+    let allExpanded = true;
+    function toggleAllAnswers() {
+      const answerBlocks = document.querySelectorAll('.answer-content');
+      allExpanded = !allExpanded;
+
+      answerBlocks.forEach(block => {
+        const icon = document.getElementById(block.id + '-icon');
+        if (allExpanded) {
+          block.classList.remove('hidden');
+          if (icon) icon.textContent = '▼';
+        } else {
+          block.classList.add('hidden');
+          if (icon) icon.textContent = '▶';
+        }
+      });
+
+      const btnText = document.getElementById('toggleAllText');
+      const btnIcon = document.getElementById('toggleAllIcon');
+      if (allExpanded) {
+        btnText.textContent = 'Hide All Answers';
+        btnIcon.textContent = '🙈';
+      } else {
+        btnText.textContent = 'Show All Answers';
+        btnIcon.textContent = '👁️';
+      }
+    }
+  </script>
+</body>
+</html>
